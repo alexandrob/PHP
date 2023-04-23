@@ -128,7 +128,7 @@ function smtpMailer($password) {
 	$mail->Port = 587;  					// A porta 587 deverá estar aberta em seu servidor
 
 	//Recipients
-	$mail->SetFrom("noreplyaddtechnologia@gmail.com");
+	$mail->SetFrom("email@origem.com");
 	$mail->AddAddress("email@destino.com");		// Para adicionar mais um destinatario repita a linha e ajuste o endereço
 
 	//Content
