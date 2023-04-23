@@ -38,7 +38,7 @@ $wlan_id = ['64126c51f9e604144549cbf5'];   // Acesse API Configuration > list wl
  */
 $predefined_password = '';
 
-//
+// Caso houver valor na variável predefined_password sera desconsiderado o código abaixo
 if ( $predefined_password == '' ) {
         $new_password = generateStrongPassword();
 } else {
