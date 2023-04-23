@@ -36,7 +36,6 @@ $wlan_id = ['64126c51f9e604144549cbf5'];   // Acesse API Configuration > list wl
 /**
  * the new WPA2 password/PSK to apply to the above WLAN
  */
-//$new_password = '';
 $predefined_password = '';
 
 //
