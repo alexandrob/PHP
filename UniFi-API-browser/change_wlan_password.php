@@ -1,5 +1,4 @@
 <?php
-
 require("/usr/share/php/libphp-phpmailer/autoload.php");
 
 use PHPMailer\PHPMailer\PHPMailer;
@@ -58,8 +57,8 @@ for ($i=0;$i<count($wlan_id);$i++){
 	$results          = $unifi_connection->set_wlansettings($wlan_id[$i], $new_password);
 }
 
-smtpMailer( $new_password );
 
+smtpMailer( $new_password );
 
 // FUNCAO GERADOR DE SENHA
 // the new WPA2 password/PSK to apply to the above WLAN min = 8 / max = 63 characters
@@ -110,7 +109,6 @@ function generateStrongPassword($length = 8, $add_dashes = false, $available_set
         return $dash_str;
 }
 
-
 // FUNCAO ENVIA EMAIL
 // https://github.com/PHPMailer/PHPMailer para orientacoes de uso
 function smtpMailer($password) {
@@ -152,7 +150,6 @@ function smtpMailer($password) {
 	}
 }
 if (!empty($error)) echo $error;
-
 
 
 /**
