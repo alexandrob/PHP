@@ -122,14 +122,14 @@ function smtpMailer($password) {
 	$mail->SMTPDebug = 2;					// Debug: 0=OFF, 1=CLIENT, 2=SERVER, 3=CONNECTION, 4=LOWLEVEL
 	$mail->Host = 'smtp.gmail.com';				// SMTP utilizado
 	$mail->SMTPAuth = true;					// Autenticação ativada
-	$mail->Username = "noreplyaddtechnologia@gmail.com";	// Conta de autenticacao
+	$mail->Username = "<email@origem.com>";			// Conta de autenticacao
 	$mail->Password = "<SENHA>";				// Password gerado por 2FA > Password APPS
 	$mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;	// Requerido pelo GMail
 	$mail->Port = 587;  					// A porta 587 deverá estar aberta em seu servidor
 
 	//Recipients
-	$mail->SetFrom("email@origem.com");
-	$mail->AddAddress("email@destino.com");		// Para adicionar mais um destinatario repita a linha e ajuste o endereço
+	$mail->SetFrom("<email@origem.com>");
+	$mail->AddAddress("<email@destino.com>");		// Para adicionar mais um destinatario repita a linha e ajuste o endereço
 
 	//Content
 	$mail->IsHtml(true);
