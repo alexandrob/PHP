@@ -123,14 +123,13 @@ function smtpMailer($password) {
 	$mail->Host = 'smtp.gmail.com';				// SMTP utilizado
 	$mail->SMTPAuth = true;					// Autenticação ativada
 	$mail->Username = "noreplyaddtechnologia@gmail.com";	// Conta de autenticacao
-	$mail->Password = "SENHA";				// Password gerado por 2FA > Password APPS
+	$mail->Password = "<SENHA>";				// Password gerado por 2FA > Password APPS
 	$mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;	// Requerido pelo GMail
 	$mail->Port = 587;  					// A porta 587 deverá estar aberta em seu servidor
 
 	//Recipients
 	$mail->SetFrom("noreplyaddtechnologia@gmail.com");
-	$mail->AddAddress("alexandrob@outlook.com");		// Para adicionar mais um destinatario repita a linha e ajuste o endereço
-	$mail->AddAddress("alexandrob77@gmail.com");
+	$mail->AddAddress("email@destino.com");		// Para adicionar mais um destinatario repita a linha e ajuste o endereço
 
 	//Content
 	$mail->IsHtml(true);
